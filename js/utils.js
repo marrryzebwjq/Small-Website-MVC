@@ -41,7 +41,6 @@ class Observable {
 class Observer {
   constructor(){
   }
-
   update(observable, object){
   }
 }
