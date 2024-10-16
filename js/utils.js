@@ -12,13 +12,11 @@ class Observable {
 
   // ----
   notifyObservers(object = null){
-
     if(this.state == true){
       for(let i = 0; i < this.observers.length; i++) {
         this.observers[i].update(this, object);
       }
     }
-
     this.state = false;
   }
 
@@ -42,10 +40,8 @@ class Observable {
 
 class Observer {
   constructor(){
-
   }
 
   update(observable, object){
-
   }
 }

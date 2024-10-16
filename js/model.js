@@ -1,10 +1,8 @@
 // implementation class
 class Model extends Observable {
 
-    //constructeur
     constructor() {
         super()
-
         //création d'un int compteur pour la modification du compteur affiché
         this.compteur = 0;
     }
