@@ -11,18 +11,18 @@ class View {
 
     this.buttonplus = document.createElement('button');
     this.buttonminus = document.createElement('button');
-    this.input = document.createElement('input');
+    this.count = document.createElement('input');
 
 
     this.buttonplus.innerHTML="+";
     this.buttonminus.innerHTML="-";
-    this.input.disabled = true;
-    this.input.placeholder = 0;
+    this.count.disabled = true;
+    this.count.placeholder = 0;
 
     //this.div.appendChild();
 
     this.div.appendChild(this.buttonminus);
-    this.div.appendChild(this.input);
+    this.div.appendChild(this.count);
     this.div.appendChild(this.buttonplus);
 
 
