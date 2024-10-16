@@ -1,6 +1,5 @@
 
-
-class Controler {
+class Controller {
 
   constructor(model){
 

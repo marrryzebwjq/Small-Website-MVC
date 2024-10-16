@@ -1,21 +1,13 @@
-
-
 // implementation class
-
 class Model extends Observable {
 
     //constructeur
     constructor() {
         super()
 
-        //création d'un int compteur pour les boutons
+        //création d'un int compteur pour la modification du compteur affiché
         this.compteur = 0;
-
-        
     }
-
-
-
 
     //plus()
     plus() {
@@ -25,7 +17,6 @@ class Model extends Observable {
 
         console.log("compteur ++")
     }
-
     //minus()
 
 }
