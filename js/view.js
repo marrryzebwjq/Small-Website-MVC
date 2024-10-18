@@ -14,8 +14,10 @@ class View {
     this.count = document.createElement('input');
 
 
-    this.buttonplus.innerHTML="+";
-    this.buttonminus.innerHTML="-";
+    this.buttonplus.innerHTML = "+";
+    this.buttonminus.innerHTML = "-";
+    this.buttonminus.disabled = true
+
     this.count.disabled = true;
     this.count.placeholder = 0;
 
