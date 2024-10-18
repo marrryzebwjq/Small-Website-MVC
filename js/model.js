@@ -9,12 +9,21 @@ class Model extends Observable {
 
     //plus()
     plus() {
-        this.compteur++
-        this.setChanged()
-        this.notifyObservers()
-
-        console.log("compteur ++")
+        if (this.compteur<10) {
+            this.compteur++
+            this.setChanged()
+            this.notifyObservers()
+        }
+        console.log("compteur ++ : " + this.compteur)
     }
     //minus()
+    minus() {
+        if (this.compteur>0) {
+            this.compteur--
+            this.setChanged()
+            this.notifyObservers()
+        }
+        console.log("compteur -- : " + this.compteur)
+    }
 
 }

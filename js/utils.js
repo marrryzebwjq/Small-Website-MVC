@@ -5,11 +5,9 @@ class Observable {
     this.observers = [];
     this.state = false;
   }
-
   addObservers(observer){
     this.observers.push(observer);
   }
-
   // ----
   notifyObservers(object = null){
     if(this.state == true){
@@ -19,16 +17,13 @@ class Observable {
     }
     this.state = false;
   }
-
   clearObservers(){
     this.observers = [];
   }
-
   // ----
   setChanged(){
     this.state = true;
   }
-
   removeObserver(observer){
     for(let i = 0; i < this.observers.length; i++) {
       if(this.observers[i] === observer){
