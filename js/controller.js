@@ -25,7 +25,7 @@ class UpdateCount extends Observer {
         this.view = view
     }
     update(observable, object) {
-        this.view.count.placeholder = observable.compteur
+        this.view.count.textContent = observable.compteur
         this.view.buttonminus.disabled = observable.disabledminus
         this.view.buttonplus.disabled  = observable.disabledplus
     }

@@ -5,24 +5,20 @@ class View {
 
     this.div = document.createElement('div');
 
-
-
-    //creer un bouton ici puis appendchild
-
+    //creation des elements
     this.buttonplus = document.createElement('button');
     this.buttonminus = document.createElement('button');
-    this.count = document.createElement('input');
+    this.count = document.createElement('span');
 
 
+    // init
     this.buttonplus.innerHTML = "+";
     this.buttonminus.innerHTML = "-";
     this.buttonminus.disabled = true
 
-    this.count.disabled = true;
-    this.count.placeholder = 0;
+    this.count.textContent = 0;
 
-    //this.div.appendChild();
-
+    //ajout dans la div
     this.div.appendChild(this.buttonminus);
     this.div.appendChild(this.count);
     this.div.appendChild(this.buttonplus);
