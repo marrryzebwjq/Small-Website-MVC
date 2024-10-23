@@ -3,28 +3,23 @@ class View {
 
   constructor(){
 
-    this.div = document.createElement('div');
-
-    //creation des elements
-    this.buttonplus = document.createElement('button');
-    this.buttonminus = document.createElement('button');
-    this.count = document.createElement('span');
-
-
-    // init
-    this.buttonplus.innerHTML = "+";
-    this.buttonminus.innerHTML = "-";
+    let buttonm = document.querySelector('#button-m'); // [-] parent
+    this.buttonminus = document.createElement('button');            // creation element
+    buttonm.appendChild(this.buttonminus);                                  // ajout dans la div
+    this.buttonminus.className = "btn btn-warning round-border"              // style
+    this.buttonminus.innerHTML = "-";                                       // init
     this.buttonminus.disabled = true
 
-    this.count.textContent = 0;
+    let ctext = document.querySelector('#c-text');     // 0
+    this.count = document.createElement('span');
+    ctext.appendChild(this.count);
+    this.count.textContent = "0";
 
-    //ajout dans la div
-    this.div.appendChild(this.buttonminus);
-    this.div.appendChild(this.count);
-    this.div.appendChild(this.buttonplus);
+    let buttonp = document.querySelector('#button-p'); // [+]
+    this.buttonplus = document.createElement('button');
+    buttonp.appendChild(this.buttonplus);
+    this.buttonplus.className = "btn btn-warning round-border"
+    this.buttonplus.innerHTML = "+";
 
-
-    let nodeParent = document.querySelector('#outer');
-    nodeParent.appendChild(this.div);
   }
 }
