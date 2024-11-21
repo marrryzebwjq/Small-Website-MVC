@@ -6,7 +6,6 @@ body {
   min-height: 100%;
   height: 100%;
   width: 100%;
-  background-color: #fff4ac !important; /* Couleur de fond pour toute la page */
 }
 
 .outer{
@@ -19,7 +18,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #834a29;
+  background-color: #5CDB95;
   height: 100px;
 }
 
@@ -29,13 +28,13 @@ body {
   align-items: baseline;
   padding : 10px;
   flex-grow : 1;
-  background-color: #834a29;
-  border:1px #674019 solid;
+  background-color: #8EE4AF;
+  border:1px #379683 solid;
   margin-top: 10px;
 }
 
 #title{
-  color : #ffc800;
+  color : #05386B;
 }
 
 .button{
@@ -60,7 +59,7 @@ body {
   -webkit-appearance: none;
   width: 30%;
   height: 15px;
-  background: #ffe169;
+  background: #d3d3d3;
   outline: none;
   opacity: 1.0;
 }
@@ -74,14 +73,14 @@ body {
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #fad643;
+  background: #5CDB95;
   cursor: pointer;
 }
 
 
 .menu {
   width: 120px;
-  background-color: #dbb42c;
+  background-color: #8EE4AF;
   box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.5);
   position: fixed;
   display: none;

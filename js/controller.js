@@ -1,32 +1,57 @@
+class UpdateTxt extends Observer {
+
+    constructor(view){
+        super();
+        this.view = view;
+    }
+
+    update(observable, object){
+        this.view.input.value = observable.x;
+    }
+}
+
+class UpdateDisable extends Observer {
+
+    constructor(view){
+        super();
+        this.view = view;
+    }
+
+    update(observable, object){
+        this.view.buttonPlus.disabled = observable.x == Model.MAX;
+        this.view.buttonMinus.disabled = observable.x == Model.MIN;
+    }
+}
 
 class Controller {
 
-  constructor(model){
-      this.view = new View();
-      this.model = model;
+    constructor(model){
 
-      // update : ajout d'un observer
-      let updateCount = new UpdateCount(this.view);
-      this.model.addObservers(updateCount);
+        this.view = new View();
+        this.model = model;
 
-      // action
-      //quand on clique sur les boutons, ça appelle une fonction du modele
-      this.view.buttonplus.addEventListener('click', (event) => model.plus())
-      this.view.buttonminus.addEventListener('click', (event) => model.minus())
+        // update
 
-  }
-}
+        let updateTxt  = new UpdateTxt(this.view);
+        this.model.addObservers(updateTxt);
 
-//création des observers
-class UpdateCount extends Observer {
+        let updadeDisable = new UpdateDisable(this.view);
+        this.model.addObservers(updadeDisable);
 
-    constructor(view) {
-        super()
-        this.view = view
-    }
-    update(observable, object) {
-        this.view.count.textContent = observable.compteur
-        this.view.buttonminus.disabled = observable.disabledminus
-        this.view.buttonplus.disabled  = observable.disabledplus
+        //  action
+        let actionPlus = (event) => {
+            this.model.plus();
+        }
+
+        let actionMinus = (event) => {
+            this.model.minus();
+        }
+
+        this.view.buttonPlus.addEventListener('click', actionPlus);
+        this.view.buttonMinus.addEventListener('click', actionMinus);
+
+        // permet de lancer une fois les observer pour initialiser la vue
+        this.model.setValue(0);
+
     }
 }
