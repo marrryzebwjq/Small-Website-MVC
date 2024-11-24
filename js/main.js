@@ -1,4 +1,4 @@
 //création du modèle Observable
-let model = new Model();
+let model = new CounterModel();
 
-let controller = new Controller(model);
+let controller = new CounterController(model);

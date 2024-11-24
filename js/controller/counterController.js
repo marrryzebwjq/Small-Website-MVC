@@ -1,8 +1,8 @@
 
-class Controller {
+class CounterController {
 
   constructor(model){
-      this.view = new View();
+      this.view = new CounterView();
       this.model = model;
 
       // update : ajout d'un observer
@@ -15,18 +15,4 @@ class Controller {
       this.view.buttonminus.addEventListener('click', (event) => model.minus())
 
   }
-}
-
-//création des observers
-class UpdateCount extends Observer {
-
-    constructor(view) {
-        super()
-        this.view = view
-    }
-    update(observable, object) {
-        this.view.count.textContent = observable.compteur
-        this.view.buttonminus.disabled = observable.disabledminus
-        this.view.buttonplus.disabled  = observable.disabledplus
-    }
 }

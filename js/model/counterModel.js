@@ -1,5 +1,5 @@
 // implementation class
-class Model extends Observable {
+class CounterModel extends Observable {
 
     constructor() {
         super()
