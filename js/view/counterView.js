@@ -3,21 +3,22 @@ class CounterView {
 
   constructor(){
 
-    let buttonm = document.querySelector('#button-m'); // [-] parent
+    let maincounterdiv = document.querySelector('#counter'); // [-] 0 [+] parent
+
     this.buttonminus = document.createElement('button');            // creation element
-    buttonm.appendChild(this.buttonminus);                                  // ajout dans la div
+    maincounterdiv.appendChild(this.buttonminus);                           // ajout dans la div
+
     this.buttonminus.className = "btn btn-warning round-border"              // style
-    this.buttonminus.innerHTML = "-";                                       // init
+    this.buttonminus.innerHTML = "-";                                        // init
     this.buttonminus.disabled = true
 
-    let ctext = document.querySelector('#c-text');     // 0
-    this.count = document.createElement('span');
-    ctext.appendChild(this.count);
+    this.count = document.createElement('span'); // 0
+    maincounterdiv.appendChild(this.count);
+    this.count.className = "mx-3"
     this.count.textContent = "0";
 
-    let buttonp = document.querySelector('#button-p'); // [+]
-    this.buttonplus = document.createElement('button');
-    buttonp.appendChild(this.buttonplus);
+    this.buttonplus = document.createElement('button'); // [+]
+    maincounterdiv.appendChild(this.buttonplus);
     this.buttonplus.className = "btn btn-warning round-border"
     this.buttonplus.innerHTML = "+";
 
