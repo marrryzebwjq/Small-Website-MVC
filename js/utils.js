@@ -1,3 +1,15 @@
+// utils classes
+
+class Mediator{
+
+  constructor(){
+
+  }
+
+  mediate(observable, object){
+
+  }
+}
 
 class Observable {
 
